@@ -1,0 +1,14 @@
+
+{% extends "/Bases/StandardWebPage.html.twig" %}
+
+{% block content %}
+    <h1>Available Schemas</h1>
+    <ul>
+        {% for schemaName in AvailableSchemas %}
+            <li>
+                <a href="/v1/{{ schemaName }}.json">{{ schemaName }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
