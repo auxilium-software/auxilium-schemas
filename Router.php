@@ -1,5 +1,8 @@
 <?php
 
+use App\Wrappers\TwigWrapper;
+
+require_once __DIR__ . '/vendor/autoload.php';
 
 $baseDir = __DIR__ . "/Public";
 
@@ -29,5 +32,10 @@ foreach ($routes as $route => $file)
 }
 
 http_response_code(404);
-echo "404 Not Found: The requested URL \"$path\" was not found on this server.";
-die();
+TwigWrapper::RenderTwig(
+    target: "VirtualPage/ErrorPage.html.twig",
+    arguments: [
+        "ErrorCode"=>404,
+        "ErrorDetails"=>"The requested URL \"$path\" was not found on this server.",
+    ],
+);
