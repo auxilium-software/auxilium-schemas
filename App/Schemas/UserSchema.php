@@ -44,7 +44,7 @@ class UserSchema
 
 
     #[SchemaDocumentField(
-        Name: "contact_email",
+        Name: "auxiliary_emails",
         Existence: SchemaFieldExistence::MAY,
         Comment: "This SHOULD be used for unverified user input instead of the 'contact_email' field",
         ValidSchemas: [
