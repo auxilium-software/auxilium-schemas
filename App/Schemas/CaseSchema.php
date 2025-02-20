@@ -8,7 +8,8 @@ use Darksparrow\AuxiliumSchemaBuilder\Enumerators\SchemaFieldExistence;
 
 #[SchemaDocument(
     Name: "case",
-    Comment: "The case object itself SHOULD not have a value"
+    Comment: "The case object itself SHOULD not have a value",
+    MaxSize: 0,
 )]
 class CaseSchema
 {
