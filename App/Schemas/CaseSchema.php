@@ -88,7 +88,7 @@ class CaseSchema
             Name: "messages",
             Comment: "",
             ValidSchemas: [
-                CollectionSchema::class,
+                MessageSchema::class,
             ]
         ),
     )]
